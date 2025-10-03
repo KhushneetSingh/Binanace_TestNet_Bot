@@ -1,7 +1,7 @@
 class Config:
-    # Binance API Credentials (Testnet)
-    API_KEY = 'Your API Key'
-    API_SECRET = 'Your API Secret'
+    # Binance API Credentials (DEMO ACCOUNT)
+    API_KEY = 'API Key Here'
+    API_SECRET = 'API Secret Here'
     
     # Testnet Configuration
     TESTNET_URL = 'https://testnet.binancefuture.com'

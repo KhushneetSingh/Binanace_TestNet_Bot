@@ -33,7 +33,7 @@ cd Binance-TestNet-Bot
 ### 3. Configure API Credentials
 
 - Open [`config.py`](config.py).
-- Replace `'Your API Key'` and `'Your API Secret'` with your testnet credentials.
+- Replace `'Your API Key'` and `'Your API Secret'` with your DEMO Account API Key credentials.
 
 ```python
 class Config:
