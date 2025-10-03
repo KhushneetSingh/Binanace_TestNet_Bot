@@ -1,6 +1,6 @@
 from typing import Dict, Any, Optional, List
 from binance.exceptions import BinanceAPIException
-from logger import setup_logger
+from logs.logger import setup_logger
 
 logger = setup_logger(__name__)
 

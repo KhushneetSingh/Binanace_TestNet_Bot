@@ -1,5 +1,5 @@
-from bot import TradingBot
-from logger import setup_logger
+from src.bot import TradingBot
+from logs.logger import setup_logger
 
 logger = setup_logger(__name__)
 

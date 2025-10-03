@@ -1,7 +1,7 @@
 class Config:
     # Binance API Credentials (DEMO ACCOUNT)
-    API_KEY = 'API Key Here'
-    API_SECRET = 'API Secret Here'
+    API_KEY = 'B3XpMzuSfIuCON7MZoYpxGjvOtRAqtLOnFgPL9pxpA6biGKUeR66897leFfZEjVB'
+    API_SECRET = 'OE8ihrcFqKC9Zjbw51vrYY7lUP9W1sEWNUnZPsGvJMxvhIZaVK0cMQyKpQSsEH80'
     
     # Testnet Configuration
     TESTNET_URL = 'https://testnet.binancefuture.com'

@@ -2,8 +2,8 @@ from typing import Optional, Dict, Any, List
 from binance.client import Client
 from binance.exceptions import BinanceAPIException
 from config import Config
-from orders import OrderManager
-from logger import setup_logger
+from src.orders import OrderManager
+from logs.logger import setup_logger
 
 logger = setup_logger(__name__)
 

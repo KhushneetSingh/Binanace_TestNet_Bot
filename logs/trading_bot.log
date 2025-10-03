@@ -1,0 +1,109 @@
+2025-10-02 16:52:06,811 - bot - INFO - ============================================================
+2025-10-02 16:52:06,811 - bot - INFO - Initializing Binance Futures Trading Bot
+2025-10-02 16:52:06,811 - bot - INFO - ============================================================
+2025-10-02 16:52:08,138 - bot - INFO - Bot initialized in TESTNET mode
+2025-10-02 16:52:08,139 - orders - INFO - OrderManager initialized
+2025-10-02 16:52:14,129 - bot - ERROR - ✗ API Connection failed: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-10-02 16:52:14,129 - __main__ - ERROR - Initialization failed: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+Traceback (most recent call last):
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/main.py", line 65, in main
+    bot = TradingBot()
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/bot.py", line 33, in __init__
+    self._validate_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/bot.py", line 38, in _validate_connection
+    account = self.client.futures_account()
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/.venv/lib/python3.13/site-packages/binance/client.py", line 7793, in futures_account
+    return self._request_futures_api("get", "account", True, 2, data=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/.venv/lib/python3.13/site-packages/binance/client.py", line 126, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/.venv/lib/python3.13/site-packages/binance/client.py", line 89, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/.venv/lib/python3.13/site-packages/binance/client.py", line 98, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-10-03 23:40:36,025 - bot - INFO - ============================================================
+2025-10-03 23:40:36,026 - bot - INFO - Initializing Binance Futures Trading Bot
+2025-10-03 23:40:36,026 - bot - INFO - ============================================================
+2025-10-03 23:40:37,465 - bot - INFO - Bot initialized in TESTNET mode
+2025-10-03 23:40:37,465 - orders - INFO - OrderManager initialized
+2025-10-03 23:40:37,952 - bot - INFO - ✓ Connection validated successfully
+2025-10-03 23:40:37,952 - bot - INFO - ✓ Account Balance: 5000.00000000 USDT
+2025-10-03 23:40:37,952 - bot - INFO - ============================================================
+2025-10-03 23:41:04,740 - __main__ - ERROR - Operation failed: Side must be 'BUY' or 'SELL'
+Traceback (most recent call last):
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/main.py", line 84, in main
+    order = bot.place_market_order(symbol, side, quantity)
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/bot.py", line 148, in place_market_order
+    return self.order_manager.place_market_order(symbol, side, quantity)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/orders.py", line 40, in place_market_order
+    self._validate_params(symbol, side, quantity)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/orders.py", line 21, in _validate_params
+    raise ValueError("Side must be 'BUY' or 'SELL'")
+ValueError: Side must be 'BUY' or 'SELL'
+2025-10-03 23:41:38,278 - orders - INFO - Placing MARKET order: BUY 1e-06 BTCUSDT
+2025-10-03 23:41:38,444 - orders - ERROR - ✗ Market order failed: APIError(code=-1102): Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-10-03 23:41:38,445 - __main__ - ERROR - Operation failed: APIError(code=-1102): Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+Traceback (most recent call last):
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/main.py", line 84, in main
+    order = bot.place_market_order(symbol, side, quantity)
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/bot.py", line 148, in place_market_order
+    return self.order_manager.place_market_order(symbol, side, quantity)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/orders.py", line 45, in place_market_order
+    order = self.client.futures_create_order(
+        symbol=symbol,
+    ...<2 lines>...
+        quantity=quantity
+    )
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/.venv/lib/python3.13/site-packages/binance/client.py", line 7659, in futures_create_order
+    return self._request_futures_api("post", "order", True, data=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/.venv/lib/python3.13/site-packages/binance/client.py", line 126, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/.venv/lib/python3.13/site-packages/binance/client.py", line 89, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/.venv/lib/python3.13/site-packages/binance/client.py", line 98, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1102): Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-10-03 23:42:48,941 - bot - INFO - ============================================================
+2025-10-03 23:42:48,942 - bot - INFO - Initializing Binance Futures Trading Bot
+2025-10-03 23:42:48,942 - bot - INFO - ============================================================
+2025-10-03 23:42:49,430 - bot - INFO - Bot initialized in TESTNET mode
+2025-10-03 23:42:49,430 - orders - INFO - OrderManager initialized
+2025-10-03 23:42:50,004 - bot - INFO - ✓ Connection validated successfully
+2025-10-03 23:42:50,005 - bot - INFO - ✓ Account Balance: 5000.00000000 USDT
+2025-10-03 23:42:50,005 - bot - INFO - ============================================================
+2025-10-03 23:43:09,756 - orders - ERROR - Failed to get order status: APIError(code=-1102): Mandatory parameter 'symbol' was not sent, was empty/null, or malformed.
+2025-10-03 23:43:09,758 - __main__ - ERROR - Operation failed: APIError(code=-1102): Mandatory parameter 'symbol' was not sent, was empty/null, or malformed.
+Traceback (most recent call last):
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/main.py", line 161, in main
+    order = bot.get_order_status(symbol, order_id)
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/bot.py", line 172, in get_order_status
+    return self.order_manager.get_order_status(symbol, order_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/orders.py", line 223, in get_order_status
+    order = self.client.futures_get_order(
+        symbol=symbol,
+        orderId=order_id
+    )
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/.venv/lib/python3.13/site-packages/binance/client.py", line 7702, in futures_get_order
+    return self._request_futures_api("get", "order", True, data=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/.venv/lib/python3.13/site-packages/binance/client.py", line 126, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/.venv/lib/python3.13/site-packages/binance/client.py", line 89, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/ksploitX/Developer/Python/Binance TestNet Bot/.venv/lib/python3.13/site-packages/binance/client.py", line 98, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1102): Mandatory parameter 'symbol' was not sent, was empty/null, or malformed.
+2025-10-03 23:43:21,620 - orders - INFO - Retrieved 0 open order(s)
